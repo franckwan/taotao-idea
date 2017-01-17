@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.taotao.service.ItemService;
 
 @Controller
+@RequestMapping(value = "test")
 public class ItemController {
 	@Autowired
 	private ItemService itemService;
 	
 	
-	@RequestMapping("/item/{itemId}")
+	@RequestMapping(value = "item.action")
 	@ResponseBody
 	public Object getItemById(@PathVariable Long itemId){
 		return itemService.getTbItemById(itemId);
