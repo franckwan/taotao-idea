@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.taotao.service.ItemService;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping(value = "test")
 public class ItemController {
@@ -18,6 +20,14 @@ public class ItemController {
 	@RequestMapping("/item/{itemId}")
 	@ResponseBody
 	public Object getItemById(@PathVariable Long itemId){
+		return itemService.getTbItemById(itemId);
+	}
+
+	@RequestMapping(value = "/test")
+	@ResponseBody
+	public Object test(Map<Object,String> object){
+		Long itemId = 1234L;
+		System.out.println(object.toString());
 		return itemService.getTbItemById(itemId);
 	}
 }

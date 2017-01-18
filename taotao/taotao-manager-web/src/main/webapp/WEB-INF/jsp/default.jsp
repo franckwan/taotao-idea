@@ -20,6 +20,34 @@
 		</noscript>
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<script type="text/javascript">
+			function loadXMLDoc() {
+				$.ajax({
+					url:'test/test',
+					type:'POST', //GET
+					async:true,    //或false,是否异步
+					data:{
+						name:'yang',age:25
+					},
+					timeout:5000,    //超时时间
+					dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+					beforeSend:function(xhr){
+
+					},
+					success:function(data,textStatus,jqXHR){
+
+					},
+					error:function(xhr,textStatus){
+
+					},
+					complete:function(){
+						console.log('结束')
+					}
+				});
+
+
+			};
+		</script>
 	</head>
 	<body class="loading">
 		<div id="wrapper">
@@ -40,6 +68,7 @@
 								<li><a href="#" class="fa fa-envelope-o"><span>Email</span></a></li>
 							</ul>
 						</nav>
+						<button type="button" onclick="loadXMLDoc()">Change Content</button>
 					</header>
 
 				<!-- Footer -->
@@ -49,5 +78,6 @@
 				
 			</div>
 		</div>
+		<div id="myDiv"></div>
 	</body>
 </html>
