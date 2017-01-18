@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.taotao.service.ItemService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 @Controller
@@ -25,9 +26,10 @@ public class ItemController {
 
 	@RequestMapping(value = "/test")
 	@ResponseBody
-	public Object test(Map<Object,String> object){
+	public Object test(HttpServletRequest request){
 		Long itemId = 1234L;
-		System.out.println(object.toString());
+		Map<String,String> stringStringMap = request.getParameterMap();
+		System.out.println(stringStringMap.toString());
 		return itemService.getTbItemById(itemId);
 	}
 }
