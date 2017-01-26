@@ -15,13 +15,21 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	<!-- 资源映射 -->
-	<mvc:resources location="/WEB-INF/html/" mapping="/html/**"/>
-	<mvc:resources location="/WEB-INF/viewWorld/css/" mapping="/css/**"/>
-	<mvc:resources location="/WEB-INF/viewWorld/js/" mapping="/js/**"/>
-	<mvc:resources location="/WEB-INF/viewWorld/sass/" mapping="/sass/**"/>
-	<mvc:resources location="/WEB-INF/viewWorld/fonts/" mapping="/fonts/**"/>
-	<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
-	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
+	<!---->
+	<!--<mvc:resources location="/WEB-INF/viewWorld/css/" mapping="/css/**"/>-->
+	<!--<mvc:resources location="/WEB-INF/viewWorld/js/" mapping="/js/**"/>-->
+	<!--<mvc:resources location="/WEB-INF/viewWorld/sass/" mapping="/sass/**"/>-->
+	<!--<mvc:resources location="/WEB-INF/viewWorld/fonts/" mapping="/fonts/**"/>-->
+	<!--<mvc:resources location="/WEB-INF/viewWorld/QuestionApp/" mapping="/QuestionApp/**"/>-->
+	<!--<mvc:resources location="/WEB-INF/html/" mapping="/html/**"/>-->
+	<!--<mvc:resources location="/WEB-INF/jsp/" mapping="/jsp/**"/>-->
+	<!--<mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>-->
+	<!--<mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>-->
+
+	<mvc:resources location="/WEB-INF/wansu_blog/" mapping="/**"/>
+
+
+
 
 	
 	<!-- 定义文件上传解析器 -->

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.taotao.service.ItemService;
@@ -26,10 +27,9 @@ public class ItemController {
 
 	@RequestMapping(value = "/test")
 	@ResponseBody
-	public Object test(HttpServletRequest request){
+	public Object test(@RequestParam Map<String,Object> request){
 		Long itemId = 1234L;
-		Map<String,String> stringStringMap = request.getParameterMap();
-		System.out.println(stringStringMap.toString());
-		return itemService.getTbItemById(itemId);
+		System.out.println(request.toString());
+		return itemService.getTbItemById(536563L);
 	}
 }

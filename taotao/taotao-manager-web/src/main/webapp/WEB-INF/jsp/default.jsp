@@ -12,6 +12,11 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/jquery-3.1.1.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/test.js"></script>
+        <script type="text/javascript" src="js/jquery-easyui-1.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="js/jquery-easyui-1.4.1/locale/easyui-lang-zh_CN.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -33,7 +38,7 @@
 					dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
 
 					success:function(data,textStatus,jqXHR){
-
+                        console.log('结束');
 					},
 					error:function(xhr,textStatus){
 
@@ -59,14 +64,13 @@
 						<p>Whatever is worth doing at all is worth doing well</p>
 						<nav>
 							<ul>
-								<li><a href="html/index.html" class="fa fa-twitter"><span>Twitter</span></a></li>
-								<li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
-								<li><a href="#" class="fa fa-dribbble"><span>Dribbble</span></a></li>
-								<li><a href="#" class="fa fa-github"><span>Github</span></a></li>
-								<li><a href="#" class="fa fa-envelope-o"><span>Email</span></a></li>
+								<li><a href="#" onclick="loadXMLDoc()" class="fa fa-twitter"><span>Twitter</span></a></li>
+								<li><a href="jsp/index.jsp" class="fa fa-facebook"><span>Facebook</span></a></li>
+								<li><a href="html/wansu.html" class="fa fa-dribbble"><span>Dribbble</span></a></li>
+								<li><a href="javascript:window.location.href='question.jsp'" class="fa fa-github"><span>Github</span></a></li>
+								<li><a href="question" class="fa fa-envelope-o"><span>Email</span></a></li>
 							</ul>
 						</nav>
-						<button type="button" onclick="loadXMLDoc()">Change Content</button>
 					</header>
 
 				<!-- Footer -->
@@ -76,6 +80,5 @@
 				
 			</div>
 		</div>
-		<div id="myDiv"></div>
 	</body>
 </html>
